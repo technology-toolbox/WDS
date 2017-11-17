@@ -37,6 +37,10 @@ LABEL wds
     MENU LABEL Windows Deployment Services
     KERNEL pxeboot.0
 #---
+LABEL hdt
+    MENU LABEL Run Hardware Detection Tool
+    COM32 hdt.c32
+#---
 LABEL abortpxe
     MENU LABEL Abort PXE
     KERNEL abortpxe.0
