@@ -41,6 +41,10 @@ LABEL hdt
     MENU LABEL Run Hardware Detection Tool
     COM32 hdt.c32
 #---
+LABEL reboot
+    MENU LABEL Reboot
+    COM32 reboot.c32
+#---
 LABEL abortpxe
     MENU LABEL Abort PXE
     KERNEL abortpxe.0
