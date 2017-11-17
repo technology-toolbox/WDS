@@ -1,0 +1,42 @@
+# Set the default command line
+DEFAULT vesamenu.c32
+
+# Time out and use the default menu option. Defined as tenths of a second.
+TIMEOUT 300
+
+# Prompt the user. Set to '1' to automatically choose the default option. This
+# is really meant for files matched to MAC addresses.
+PROMPT 0
+
+# Menu configuration
+#
+# Reference: http://www.syslinux.org/wiki/index.php?title=Menu
+
+MENU COLOR screen       37;44    #ffffffff #ff1e4173 none
+MENU COLOR border       37;44    #ff3c78c3 #ffeeeeee none
+MENU COLOR scrollbar    37;44    #40000000 #ff959595 std
+MENU COLOR tabmsg       30;47    #ff4f4f4f #ffffffff none
+MENU COLOR title        34;47    #ff1e4173 #ffffffff none
+MENU COLOR sel          7;37;40  #ff000000 #ffffff99 none
+MENU COLOR unsel        30;47    #ff4f4f4f #ffffffff none
+MENU COLOR timeout_msg  30;47    #ff3c78c3 #ffffffff none
+MENU COLOR timeout      30;47    #ffbd1c1c #ffffffff none
+
+MENU TITLE Technology Toolbox PXE Boot
+
+# Menu option
+
+#---
+LABEL local
+    MENU DEFAULT
+    MENU LABEL Boot from hard disk
+    LOCALBOOT 0
+    APPEND type 0x80
+#---
+LABEL wds
+    MENU LABEL Windows Deployment Services
+    KERNEL pxeboot.0
+#---
+LABEL abortpxe
+    MENU LABEL Abort PXE
+    KERNEL abortpxe.0
