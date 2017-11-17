@@ -45,6 +45,10 @@ LABEL reboot
     MENU LABEL Reboot
     COM32 reboot.c32
 #---
+LABEL poweroff
+    MENU LABEL Power off
+    COMBOOT poweroff.com
+#---
 LABEL abortpxe
     MENU LABEL Abort PXE
     KERNEL abortpxe.0
