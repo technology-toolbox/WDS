@@ -30,8 +30,8 @@ MENU TITLE Technology Toolbox PXE Boot
 LABEL local
     MENU DEFAULT
     MENU LABEL Boot from hard disk
-    LOCALBOOT 0
-    APPEND type 0x80
+    COM32 chain.c32
+    APPEND hd0
 #---
 LABEL wds
     MENU LABEL Windows Deployment Services
