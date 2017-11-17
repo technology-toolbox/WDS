@@ -12,7 +12,11 @@ PROMPT 0
 #
 # Reference: http://www.syslinux.org/wiki/index.php?title=Menu
 
-MENU COLOR screen       37;44    #ffffffff #ff1e4173 none
+MENU BACKGROUND Technology-Toolbox-Background-640x480.png
+MENU ROWS 16
+MENU TABMSGROW 21
+MENU TIMEOUTROW 25
+
 MENU COLOR border       37;44    #ff3c78c3 #ffeeeeee none
 MENU COLOR scrollbar    37;44    #40000000 #ff959595 std
 MENU COLOR tabmsg       30;47    #ff4f4f4f #ffffffff none
@@ -24,7 +28,7 @@ MENU COLOR timeout      30;47    #ffbd1c1c #ffffffff none
 
 MENU TITLE Technology Toolbox PXE Boot
 
-# Menu option
+# Menu options
 
 #---
 LABEL local
