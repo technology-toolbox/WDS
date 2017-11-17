@@ -41,6 +41,12 @@ LABEL memtest
     MENU LABEL Run Memtest86+
     LINUX /Images/Linux/memtest86+
 #---
+LABEL partedmagic
+    MENU LABEL Parted Magic 2013_08_01
+    KERNEL memdisk
+    INITRD /Images/Linux/pmagic_2013_08_01.iso
+    APPEND iso
+#---
 LABEL hdt
     MENU LABEL Run Hardware Detection Tool
     COM32 hdt.c32
